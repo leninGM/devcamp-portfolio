@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/leninGM/devcamp_view_tool
+  revision: 5f928a0f1b4f61a7a305132db059dfb603d942e9
+  specs:
+    devcamp_view_tool_test_gem (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -196,6 +202,7 @@ DEPENDENCIES
   bootstrap (~> 4.1.3)
   byebug
   coffee-rails (~> 4.2)
+  devcamp_view_tool_test_gem!
   devise (~> 4.5)
   friendly_id (~> 5.2.0)
   jbuilder (~> 2.5)
