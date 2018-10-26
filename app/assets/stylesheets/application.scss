@@ -79,6 +79,7 @@ body {
 }
 
 @media (min-width: 48em) {
+
   .masthead-brand {
     float: left;
   }
@@ -116,4 +117,10 @@ body {
 
 .auth-links a {
   color: black;
+}
+
+.login > .card {
+  margin: 0 auto;
+  width: 22rem;
+  float: none;
 }
