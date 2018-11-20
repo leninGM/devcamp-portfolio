@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_portfolio, only: %i(edit show update destroy)
   layout 'portfolio'
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
@@ -47,6 +48,14 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to portfolios_path, notice: 'Record was successfully removed' }
     end
+  end
+
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    render body: nil
   end
 
   private
